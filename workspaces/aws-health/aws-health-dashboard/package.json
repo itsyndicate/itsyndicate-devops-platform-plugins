@@ -1,8 +1,8 @@
 {
   "name": "@itsyndicate/backstage-plugin-aws-health-dashboard",
-  "version": "0.1.0",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "version": "0.1.25",
+  "main": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "license": "Apache-2.0",
   "publishConfig": {
     "access": "public",
@@ -14,7 +14,9 @@
     "pluginId": "aws-health-dashboard",
     "pluginPackages": [
       "@itsyndicate/backstage-plugin-aws-health-dashboard"
-    ]
+    ],
+    "supported-versions": "1.32.2",
+    "pluginPackage": "backstage-plugin-aws-health-dashboard"
   },
   "sideEffects": false,
   "scripts": {
@@ -24,7 +26,12 @@
     "test": "backstage-cli package test",
     "clean": "backstage-cli package clean",
     "prepack": "backstage-cli package prepack",
-    "postpack": "backstage-cli package postpack"
+    "postpack": "backstage-cli package postpack",
+    "tsc": "tsc",
+    "prettier:check": "prettier --ignore-unknown --check .",
+    "prettier:fix": "prettier --ignore-unknown --write .",
+    "lint:check": "backstage-cli package lint",
+    "lint:fix": "backstage-cli package lint --fix"
   },
   "dependencies": {
     "@backstage/core-components": "^0.15.1",
@@ -50,6 +57,24 @@
     "react": "^16.13.1 || ^17.0.0 || ^18.0.0"
   },
   "files": [
-    "dist"
-  ]
+    "dist",
+    "dist-scalprum",
+    "config.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itsyndicate/itsyndicate-devops-platform-plugins",
+    "directory": "workspaces/aws-health/aws-health-dashboard"
+  },
+  "maintainers": [
+    "@itsyndicate/developers"
+  ],
+  "author": "ITsyndicate",
+  "homepage": "https://itsyndicate.org",
+  "bugs": "https://github.com/itsyndicate/itsyndicate-devops-platform-plugins/issues",
+  "keywords": [
+    "support:tech-preview",
+    "lifecycle:active"
+  ],
+  "module": "./dist/index.esm.js"
 }
