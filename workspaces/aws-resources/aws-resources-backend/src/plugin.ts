@@ -7,7 +7,7 @@ import { createRouter } from './service/router';
 import { AwsResourceService } from './service/AwsResourceService';
 import { Logger } from 'winston';
 const migrationsDir = resolvePackagePath(
-  '@internal/backstage-plugin-aws-resources-backend',
+  '@itsyndicate/backstage-plugin-aws-resources-backend',
   'migrations',
 )
 /**

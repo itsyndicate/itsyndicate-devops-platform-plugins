@@ -6,7 +6,7 @@ import { AwsCloudWatchDashboards } from './services/AutoDashboard'
 
 import { Router } from 'express'; // Import Router from express
 const migrationsDir = resolvePackagePath(
-  '@internal/backstage-plugin-aws-metricdashboards-backend',
+  '@itsyndicate/backstage-plugin-aws-metricdashboards-backend',
   'migrations',
 );
 /**

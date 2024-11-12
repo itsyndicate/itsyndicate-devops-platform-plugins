@@ -1,8 +1,7 @@
 {
   "extends": "@backstage/cli/config/tsconfig.json",
   "include": [
-    "src",
-    "dev"
+    "src"
   ],
   "exclude": ["node_modules"],
   "compilerOptions": {

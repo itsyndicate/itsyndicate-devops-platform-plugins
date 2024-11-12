@@ -8,7 +8,7 @@ import { catalogServiceRef } from '@backstage/plugin-catalog-node/alpha';
 import { DatabaseHandler } from './services/UserLinksDatabase';
 
 const migrationsDir = resolvePackagePath(
-  '@internal/backstage-plugin-user-links-backend',
+  '@itsyndicate/backstage-plugin-user-links-backend',
   'migrations',
 );
 

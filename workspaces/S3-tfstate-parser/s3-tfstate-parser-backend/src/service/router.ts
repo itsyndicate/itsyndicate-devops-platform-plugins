@@ -1,7 +1,6 @@
 import { Router } from 'express';
 import { Logger } from 'winston';
 import { Config } from '@backstage/config';
-import { S3Client } from '@aws-sdk/client-s3';
 
 import { TerraformService } from './TerraformService';
 

@@ -6,7 +6,7 @@ import { S3Client } from '@aws-sdk/client-s3';
 
 // Path to the migrations directory
 const migrationsDir = resolvePackagePath(
-  '@internal/backstage-plugin-s3-tfstate-backend',
+  '@itsyndicate/backstage-plugin-s3-tfstate-parser-backend',
   'migrations',
 );
 

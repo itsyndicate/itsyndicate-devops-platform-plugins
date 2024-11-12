@@ -1,6 +1,6 @@
 {
   "name": "@itsyndicate/backstage-plugin-s3-tfstate-parser",
-  "version": "0.1.25",
+  "version": "0.1.60",
   "main": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
@@ -15,8 +15,7 @@
     "pluginPackages": [
       "@itsyndicate/backstage-plugin-s3-tfstate-parser"
     ],
-    "supported-versions": "1.32.2",
-    "pluginPackage": "backstage-plugin-s3-tfstate-parser"
+    "supported-versions": "^1.32.2"
   },
   "sideEffects": false,
   "scripts": {
@@ -59,7 +58,7 @@
   "files": [
     "dist",
     "dist-scalprum",
-    "config.d.ts"
+    "app-config.yaml"
   ],
   "repository": {
     "type": "git",

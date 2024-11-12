@@ -1,6 +1,6 @@
 {
   "name": "@itsyndicate/backstage-plugin-aws-resources",
-  "version": "0.1.25",
+  "version": "0.1.65",
   "main": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",
@@ -15,8 +15,7 @@
     "pluginPackages": [
       "@itsyndicate/backstage-plugin-aws-resources"
     ],
-    "supported-versions": "1.32.2",
-    "pluginPackage": "backstage-plugin-aws-resources"
+    "supported-versions": "^1.32.2"
   },
   "sideEffects": false,
   "scripts": {
