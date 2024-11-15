@@ -3,7 +3,8 @@ import { S3Client, ListObjectsV2Command, GetObjectCommand } from '@aws-sdk/clien
 import { Readable } from 'stream';
 import { TerraformResourcesDatabase } from '../db/TerraformResourcesDatabase';
 import { DatabaseService } from '@backstage/backend-plugin-api';
-
+import fs from 'fs/promises';
+import path from 'path';
 // Define a list of resource types or names to be excluded from the response
 const EXCLUDED_RESOURCES: { types: string[]; names: string[] } = {
   types: [
@@ -135,9 +136,20 @@ export class TerraformService {
     if (!this.isDatabaseInitialized()) {
       throw new Error('Database is not initialized');
     }
-
+  
     try {
       const resources = await this.db!.getResources();
+      if (resources.length === 0) {
+        this.logger.warn('No resources found in the database. Falling back to example data.');
+  
+        const exampleFilePath = path.join(__dirname, '../../assets/example.json');
+        const exampleData = await fs.readFile(exampleFilePath, 'utf-8');
+        const parsedExampleData = JSON.parse(exampleData);
+  
+        this.logger.info('Returning fallback example data.');
+        return parsedExampleData;
+      }
+  
       this.logger.info(`Fetched ${resources.length} resources from the database.`);
       return resources;
     } catch (error) {

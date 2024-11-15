@@ -1,6 +1,6 @@
 {
   "name": "@itsyndicate/backstage-plugin-s3-tfstate-parser",
-  "version": "0.1.60",
+  "version": "0.1.70",
   "main": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",

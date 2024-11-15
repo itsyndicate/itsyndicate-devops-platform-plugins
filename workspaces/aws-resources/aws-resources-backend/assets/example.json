@@ -1,0 +1,185 @@
+{
+    "vpcs": {
+        "count": 2,
+        "resources": [
+            {
+                "id": "example-vpcs-1",
+                "name": "example-vpcs-1",
+                "link": "https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#VpcDetails:VpcId=example-vpcs-1",
+                "region": "us-east-1"
+            },
+            {
+                "id": "example-vpcs-2",
+                "name": "example-vpcs-2",
+                "link": "https://eu-west-1.console.aws.amazon.com/vpc/home?region=eu-west-1#VpcDetails:VpcId=example-vpcs-2",
+                "region": "eu-west-1"
+            }
+        ]
+    },
+    "ecsClusters": {
+        "count": 2,
+        "resources": [
+            {
+                "id": "example-ecsClusters-1",
+                "name": "example-ecsClusters-1",
+                "link": "https://us-east-1.console.aws.amazon.com/ecs/home?region=us-east-1#/clusters/example-ecsClusters-1",
+                "region": "us-east-1"
+            },
+            {
+                "id": "example-ecsClusters-2",
+                "name": "example-ecsClusters-2",
+                "link": "https://eu-west-1.console.aws.amazon.com/ecs/home?region=eu-west-1#/clusters/example-ecsClusters-2",
+                "region": "eu-west-1"
+            }
+        ]
+    },
+    "databases": {
+        "count": 2,
+        "resources": [
+            {
+                "id": "example-rds-1",
+                "name": "RDS: example",
+                "link": "https://us-east-1.console.aws.amazon.com/rds/home?region=us-east-1#database:id=example-rds-1",
+                "region": "us-east-1"
+            },
+            {
+                "id": "example-dynamodb-1",
+                "name": "DynamoDB table: example",
+                "link": "https://us-east-1.console.aws.amazon.com/dynamodb/home?region=us-east-1#table?name=example-dynamodb-1",
+                "region": "us-east-1"
+            }
+        ]
+    },
+    "lambdas": {
+        "count": 2,
+        "resources": [
+            {
+                "id": "example-lambda-1",
+                "name": "example-lambda-1",
+                "link": "https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/example-lambda-1",
+                "region": "us-east-1"
+            },
+            {
+                "id": "example-lambda-2",
+                "name": "example-lambda-2",
+                "link": "https://eu-west-1.console.aws.amazon.com/lambda/home?region=eu-west-1#/functions/example-lambda-2",
+                "region": "eu-west-1"
+            }
+        ]
+    },
+    "s3Buckets": {
+        "count": 2,
+        "resources": [
+            {
+                "id": "example-s3-1",
+                "name": "example-s3-1",
+                "link": "https://s3.console.aws.amazon.com/s3/buckets/example-s3-1",
+                "region": "global"
+            },
+            {
+                "id": "example-s3-2",
+                "name": "example-s3-2",
+                "link": "https://s3.console.aws.amazon.com/s3/buckets/example-s3-2",
+                "region": "global"
+            }
+        ]
+    },
+    "apiGateways": {
+        "count": 2,
+        "resources": [
+            {
+                "id": "example-apigateway-1",
+                "name": "example-apigateway-1",
+                "link": "https://us-east-1.console.aws.amazon.com/apigateway/main/apis/example-apigateway-1/resources?api=example-apigateway-1",
+                "region": "us-east-1"
+            },
+            {
+                "id": "example-apigateway-2",
+                "name": "example-apigateway-2",
+                "link": "https://eu-west-1.console.aws.amazon.com/apigateway/main/apis/example-apigateway-2/resources?api=example-apigateway-2",
+                "region": "eu-west-1"
+            }
+        ]
+    },
+    "ebsVolumes": {
+        "count": 2,
+        "resources": [
+            {
+                "id": "example-ebsVolume-1",
+                "link": "https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#VolumeDetails:volumeId=example-ebsVolume-1",
+                "region": "us-east-1"
+            },
+            {
+                "id": "example-ebsVolume-2",
+                "link": "https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#VolumeDetails:volumeId=example-ebsVolume-2",
+                "region": "eu-west-1"
+            }
+        ]
+    },
+    "snapshots": {
+        "count": 2,
+        "resources": [
+            {
+                "id": "example-snapshot-1",
+                "link": "https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#Snapshots:snapshotId=example-snapshot-1",
+                "region": "eu-west-1"
+            },
+            {
+                "id": "example-snapshot-2",
+                "link": "https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#Snapshots:snapshotId=example-snapshot-2",
+                "region": "us-east-1"
+            }
+        ]
+    },
+    "images": {
+        "count": 2,
+        "resources": [
+            {
+                "id": "example-image-1",
+                "name": "example-image-1",
+                "link": "https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#Images:visibility=owned-by-me;imageId=example-image-1",
+                "region": "eu-west-1"
+            },
+            {
+                "id": "example-image-2",
+                "name": "example-image-2",
+                "link": "https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#Images:visibility=owned-by-me;imageId=example-image-2",
+                "region": "us-east-1"
+            }
+        ]
+    },
+    "ec2Instances": {
+        "count": 2,
+        "resources": [
+            {
+                "id": "example-ec2Instance-1",
+                "name": "example-ec2Instance-1",
+                "link": "https://us-east-1.console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:instanceId=example-ec2Instance-1",
+                "region": "us-east-1"
+            },
+            {
+                "id": "example-ec2Instance-2",
+                "name": "example-ec2Instance-2",
+                "link": "https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#Instances:instanceId=example-ec2Instance-2",
+                "region": "eu-west-1"
+            }
+        ]
+    },
+    "kubernetes": {
+        "count": 2,
+        "resources": [
+            {
+                "id": "example-kubernetes-1",
+                "name": "example-kubernetes-1",
+                "link": "https://us-east-1.console.aws.amazon.com/eks/home?region=us-east-1#/clusters/example-kubernetes-1",
+                "region": "us-east-1"
+            },
+            {
+                "id": "example-kubernetes-2",
+                "name": "example-kubernetes-2",
+                "link": "https://eu-west-1.console.aws.amazon.com/eks/home?region=eu-west-1#/clusters/example-kubernetes-2",
+                "region": "eu-west-1"
+            }
+        ]
+    }
+}

@@ -1,14 +1,25 @@
-// plugins/aws-health-backend/src/service/router.ts
-
 import express from 'express';
 import Router from 'express-promise-router';
 import { Logger } from 'winston'; // Updated import
 import { Config } from '@backstage/config'; // Import Config type
 import { AWSHealthService } from './awsHealthClient';
+import fs from 'fs/promises';
+import path from 'path';
 
 export interface RouterOptions {
   logger: Logger; // Updated type
   config: Config; // Updated type
+}
+
+async function readExampleFile(logger: Logger) {
+  try {
+    const exampleFilePath = path.join(__dirname, '../../assets/example.json');
+    const exampleData = await fs.readFile(exampleFilePath, 'utf-8');
+    return JSON.parse(exampleData);
+  } catch (error) {
+    logger.error('Error reading example.json file', error);
+    return null;
+  }
 }
 
 export async function createRouter(
@@ -33,7 +44,12 @@ export async function createRouter(
       res.json(events);
     } catch (error) {
       logger.error(`Error fetching open and recent issues: ${error}`);
-      next(error); // Pass the error to the next middleware
+      const fallbackData = await readExampleFile(logger);
+      if (fallbackData) {
+        res.json(fallbackData);
+      } else {
+        next(error); // Pass the error to the next middleware
+      }
     }
   });
 
@@ -44,7 +60,12 @@ export async function createRouter(
       res.json(events);
     } catch (error) {
       logger.error(`Error fetching scheduled changes: ${error}`);
-      next(error);
+      const fallbackData = await readExampleFile(logger);
+      if (fallbackData) {
+        res.json(fallbackData);
+      } else {
+        next(error);
+      }
     }
   });
 
@@ -55,7 +76,12 @@ export async function createRouter(
       res.json(events);
     } catch (error) {
       logger.error(`Error fetching notifications: ${error}`);
-      next(error);
+      const fallbackData = await readExampleFile(logger);
+      if (fallbackData) {
+        res.json(fallbackData);
+      } else {
+        next(error);
+      }
     }
   });
 
@@ -66,7 +92,12 @@ export async function createRouter(
       res.json(events);
     } catch (error) {
       logger.error(`Error fetching event log: ${error}`);
-      next(error);
+      const fallbackData = await readExampleFile(logger);
+      if (fallbackData) {
+        res.json(fallbackData);
+      } else {
+        next(error);
+      }
     }
   });
 

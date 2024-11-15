@@ -1,6 +1,6 @@
 {
   "name": "@itsyndicate/backstage-plugin-aws-health-dashboard",
-  "version": "0.1.55",
+  "version": "0.1.65",
   "main": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "license": "Apache-2.0",

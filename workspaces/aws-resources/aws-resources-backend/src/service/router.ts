@@ -2,6 +2,8 @@ import { Router } from 'express';
 import { Config } from '@backstage/config';
 import { Logger } from 'winston';
 import { AwsResourceService } from './AwsResourceService';
+import fs from 'fs/promises';
+import path from 'path';
 
 interface RouterOptions {
   logger: Logger;
@@ -29,8 +31,21 @@ export async function createRouter({
 
       res.json(resourceCounts);
     } catch (error: any) {
-      logger.error('Error fetching AWS resource counts', error);
-      res.status(500).json({ error: error.message });
+      logger.info('Error fetching AWS resource counts', error);
+
+      try {
+        // Reading the example.json file
+        const exampleFilePath = path.join(__dirname, '../../assets/example.json');
+        const exampleData = await fs.readFile(exampleFilePath, 'utf-8');
+        const parsedExampleData = JSON.parse(exampleData);
+
+        // Sending the fallback response
+        res.json(parsedExampleData);
+      } catch (fileError) {
+        // Logging and returning a generic error response if example.json fails
+        logger.error('Error reading example.json file', fileError);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
     }
   });
 

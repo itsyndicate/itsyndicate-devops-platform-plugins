@@ -1,6 +1,8 @@
 import { Router } from 'express';
 import { Logger } from 'winston';
 import { Config } from '@backstage/config';
+import fs from 'fs/promises';
+import path from 'path';
 
 import { TerraformService } from './TerraformService';
 
@@ -9,7 +11,6 @@ type RouterOptions = {
   config: Config;
   terraformService: TerraformService;
 };
-
 export async function createRouter(
   options: RouterOptions, 
 ): Promise<Router> {
@@ -25,8 +26,20 @@ export async function createRouter(
       res.json(resources);
     } catch (error: any) {
       logger.error('Error fetching resources from S3', error);
-      res.status(500).json({ error: 'Failed to fetch resources from S3' });
-    }
+      try {
+        // Reading the example.json file
+        const exampleFilePath = path.join(__dirname, '../../assets/example.json');
+        const exampleData = await fs.readFile(exampleFilePath, 'utf-8');
+        const parsedExampleData = JSON.parse(exampleData);
+
+        // Sending the fallback response
+        res.json(parsedExampleData);
+      } catch (fileError) {
+        // Logging and returning a generic error response if example.json fails
+        logger.error('Error reading example.json file', fileError);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
+    } 
   });
 
   // Endpoint to update resources in S3

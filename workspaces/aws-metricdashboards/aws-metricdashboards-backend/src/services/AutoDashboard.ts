@@ -43,6 +43,8 @@ import {
 import { Logger } from 'winston';
 import { AutoDashboardDatabase } from '../db/AutoDashboardDatabase'; // Import the database handler
 import { DatabaseService } from '@backstage/backend-plugin-api';
+import fs from 'fs/promises';
+import path from 'path';
 
 export class AwsCloudWatchDashboards {
   private readonly regions: string[];
@@ -88,13 +90,15 @@ export class AwsCloudWatchDashboards {
           );
         }
         return dashboards;
-      } else {
-        // No data in cache, return empty array and update cache in background
-        this.updateAutomaticDashboards().catch(error =>
-          this.logger.error(error),
-        );
-        return [];
-      }
+        } else {
+          const exampleFilePath = path.join(__dirname, '../../assets/example.json');
+          const exampleData = await fs.readFile(exampleFilePath, 'utf-8');
+          const parsedExampleData = JSON.parse(exampleData);
+          this.updateAutomaticDashboards().catch(error =>
+            this.logger.error(error),
+          );
+          return parsedExampleData;
+        }
     } catch (error) {
       this.logger.error('Error fetching automatic dashboards', error);
       throw new Error('Failed to fetch automatic dashboards');

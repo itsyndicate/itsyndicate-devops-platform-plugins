@@ -1,0 +1,1147 @@
+[
+    {
+      "id": "arn:aws:ecs:eu-north-1:012345678910:cluster/dev-Ingress-example-sample",
+      "name": "ingress_example",
+      "type": "aws_ecs_cluster",
+      "url": "https://eu-north-1.console.aws.amazon.com/ecs/home?region=eu-north-1#/clusters/dev-Ingress-example-sample",
+      "dependencies": []
+    },
+    {
+      "id": "arn:aws:ecs:eu-north-1:012345678910:cluster/dev-example-sample",
+      "name": "example",
+      "type": "aws_ecs_cluster",
+      "url": "https://eu-north-1.console.aws.amazon.com/ecs/home?region=eu-north-1#/clusters/dev-example-sample",
+      "dependencies": []
+    },
+    {
+      "id": "arn:aws:ecs:eu-north-1:012345678910:service/dev-Ingress-example-sample/dev-proxy",
+      "name": "ecs_service",
+      "type": "aws_ecs_service",
+      "url": null,
+      "dependencies": [
+        "aws_ecs_cluster.ingress_example",
+        "aws_ecs_task_definition.ingress_task_definition"
+      ]
+    },
+    {
+      "id": "fs-00704588dff73fa40",
+      "name": "efs",
+      "type": "aws_efs_file_system",
+      "url": "https://eu-north-1.console.aws.amazon.com/efs/home?region=eu-north-1#/file-systems/fs-00704588dff73fa40",
+      "dependencies": []
+    },
+    {
+      "id": "fs-081ecedfdd9aff5fe",
+      "name": "efs",
+      "type": "aws_efs_file_system",
+      "url": "https://eu-north-1.console.aws.amazon.com/efs/home?region=eu-north-1#/file-systems/fs-081ecedfdd9aff5fe",
+      "dependencies": []
+    },
+    {
+      "id": "fs-0c2ec22b01d559637",
+      "name": "efs",
+      "type": "aws_efs_file_system",
+      "url": "https://eu-north-1.console.aws.amazon.com/efs/home?region=eu-north-1#/file-systems/fs-0c2ec22b01d559637",
+      "dependencies": []
+    },
+    {
+      "id": "fs-02f4f7af655fc2ed5",
+      "name": "efs",
+      "type": "aws_efs_file_system",
+      "url": "https://eu-north-1.console.aws.amazon.com/efs/home?region=eu-north-1#/file-systems/fs-02f4f7af655fc2ed5",
+      "dependencies": []
+    },
+    {
+      "id": "fs-0cffa779400ba3a93",
+      "name": "efs",
+      "type": "aws_efs_file_system",
+      "url": "https://eu-north-1.console.aws.amazon.com/efs/home?region=eu-north-1#/file-systems/fs-0cffa779400ba3a93",
+      "dependencies": []
+    },
+    {
+      "id": "fs-033d8210131448a44",
+      "name": "efs",
+      "type": "aws_efs_file_system",
+      "url": "https://eu-north-1.console.aws.amazon.com/efs/home?region=eu-north-1#/file-systems/fs-033d8210131448a44",
+      "dependencies": []
+    },
+    {
+      "id": "fs-0bfb6099e86020508",
+      "name": "efs",
+      "type": "aws_efs_file_system",
+      "url": "https://eu-north-1.console.aws.amazon.com/efs/home?region=eu-north-1#/file-systems/fs-0bfb6099e86020508",
+      "dependencies": []
+    },
+    {
+      "id": "fs-0c770bc441a43cd60",
+      "name": "efs",
+      "type": "aws_efs_file_system",
+      "url": "https://eu-north-1.console.aws.amazon.com/efs/home?region=eu-north-1#/file-systems/fs-0c770bc441a43cd60",
+      "dependencies": []
+    },
+    {
+      "id": "fs-0eb54f37947c13990",
+      "name": "efs",
+      "type": "aws_efs_file_system",
+      "url": "https://eu-north-1.console.aws.amazon.com/efs/home?region=eu-north-1#/file-systems/fs-0eb54f37947c13990",
+      "dependencies": []
+    },
+    {
+      "id": "fs-03aa4b30347f19bc8",
+      "name": "efs",
+      "type": "aws_efs_file_system",
+      "url": "https://eu-north-1.console.aws.amazon.com/efs/home?region=eu-north-1#/file-systems/fs-03aa4b30347f19bc8",
+      "dependencies": []
+    },
+    {
+      "id": "dev-ServiceCreateStateMachineRole",
+      "name": "ServiceCreateStateMachineRole",
+      "type": "aws_iam_role",
+      "url": "https://eu-north-1.console.aws.amazon.com/iam/home?region=eu-north-1#/roles/dev-ServiceCreateStateMachineRole",
+      "dependencies": []
+    },
+    {
+      "id": "dev-backup_instance_role",
+      "name": "backupinstance",
+      "type": "aws_iam_role",
+      "url": "https://eu-north-1.console.aws.amazon.com/iam/home?region=eu-north-1#/roles/dev-backup_instance_role",
+      "dependencies": []
+    },
+    {
+      "id": "dev-ecs_studio_execution_role",
+      "name": "ecs_studio_execution_role",
+      "type": "aws_iam_role",
+      "url": "https://eu-north-1.console.aws.amazon.com/iam/home?region=eu-north-1#/roles/dev-ecs_studio_execution_role",
+      "dependencies": []
+    },
+    {
+      "id": "dev-ecs_studio_role",
+      "name": "ecs_studio_role",
+      "type": "aws_iam_role",
+      "url": "https://eu-north-1.console.aws.amazon.com/iam/home?region=eu-north-1#/roles/dev-ecs_studio_role",
+      "dependencies": []
+    },
+    {
+      "id": "dev-ecs_task_execution_role",
+      "name": "ecs_task_execution_role",
+      "type": "aws_iam_role",
+      "url": "https://eu-north-1.console.aws.amazon.com/iam/home?region=eu-north-1#/roles/dev-ecs_task_execution_role",
+      "dependencies": []
+    },
+    {
+      "id": "dev-ecs_task_role",
+      "name": "ecs_task_role",
+      "type": "aws_iam_role",
+      "url": "https://eu-north-1.console.aws.amazon.com/iam/home?region=eu-north-1#/roles/dev-ecs_task_role",
+      "dependencies": []
+    },
+    {
+      "id": "dev-iam-role",
+      "name": "lambda",
+      "type": "aws_iam_role",
+      "url": "https://eu-north-1.console.aws.amazon.com/iam/home?region=eu-north-1#/roles/dev-iam-role",
+      "dependencies": []
+    },
+    {
+      "id": "f2yvttiwti",
+      "name": "api",
+      "type": "aws_api_gateway_api_key",
+      "url": null,
+      "dependencies": []
+    },
+    {
+      "id": "api.example.net",
+      "name": "api",
+      "type": "aws_api_gateway_joke_name",
+      "url": null,
+      "dependencies": [
+        "aws_acm_certificate.api",
+        "aws_acm_certificate_validation.api",
+        "aws_route53_record.api",
+        "data.aws_route53_zone.example",
+        "time_sleep.wait_15_seconds"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-zt5hh5-GET",
+      "name": "joke_clientid",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/zt5hh5?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.joke",
+        "aws_api_gateway_resource.joke_client",
+        "aws_api_gateway_resource.joke_clientid",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-oetyo7-DELETE",
+      "name": "joke_delete",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/oetyo7?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.joke",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-v5z7gl-GET",
+      "name": "joke_name",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/v5z7gl?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.joke",
+        "aws_api_gateway_resource.joke_client",
+        "aws_api_gateway_resource.joke_clientid",
+        "aws_api_gateway_resource.joke_name",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-266na3-POST",
+      "name": "joke_point",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/266na3?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.joke",
+        "aws_api_gateway_resource.joke_point",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-oetyo7-PUT",
+      "name": "joke_put",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/oetyo7?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.joke",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-kzulru-GET",
+      "name": "joke_status_name",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/kzulru?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.joke",
+        "aws_api_gateway_resource.joke_status",
+        "aws_api_gateway_resource.joke_status_name",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-zfuzu6-POST",
+      "name": "joke_unpoint",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/zfuzu6?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.joke",
+        "aws_api_gateway_resource.joke_unpoint",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-7cnm8d-POST",
+      "name": "joke_validate",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/7cnm8d?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.joke",
+        "aws_api_gateway_resource.joke_validate",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-bqbusn-PUT",
+      "name": "studio",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/bqbusn?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.studio",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-oo998e-POST",
+      "name": "studio_action",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/oo998e?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.studio",
+        "aws_api_gateway_resource.studio_action",
+        "aws_api_gateway_resource.studio_actionnumber",
+        "aws_api_gateway_resource.studio_id",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-9c5qkl-GET",
+      "name": "studio_backup",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/9c5qkl?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.studio",
+        "aws_api_gateway_resource.studio_backup",
+        "aws_api_gateway_resource.studio_id",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-y5umo4-POST",
+      "name": "studio_backup_type",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/y5umo4?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.studio",
+        "aws_api_gateway_resource.studio_backup",
+        "aws_api_gateway_resource.studio_backup_type",
+        "aws_api_gateway_resource.studio_id",
+        "aws_api_gateway_resource.studio_new_backup",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-qvhec1-DELETE",
+      "name": "studio_backupid",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/qvhec1?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.studio",
+        "aws_api_gateway_resource.studio_backup",
+        "aws_api_gateway_resource.studio_backupid",
+        "aws_api_gateway_resource.studio_id",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-rv0vzk-GET",
+      "name": "studio_client_id",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/rv0vzk?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.studio",
+        "aws_api_gateway_resource.studio_client",
+        "aws_api_gateway_resource.studio_client_id",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-7hdwip-DELETE",
+      "name": "studio_id_delete",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/7hdwip?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.studio",
+        "aws_api_gateway_resource.studio_id",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-7hdwip-GET",
+      "name": "studio_id_get",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/7hdwip?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.studio",
+        "aws_api_gateway_resource.studio_id",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-66dnda-POST",
+      "name": "studio_resource_plan",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/66dnda?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.studio",
+        "aws_api_gateway_resource.studio_id",
+        "aws_api_gateway_resource.studio_resource_plan",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-xk1qrj-GET",
+      "name": "studio_restore",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/xk1qrj?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.studio",
+        "aws_api_gateway_resource.studio_id",
+        "aws_api_gateway_resource.studio_restore",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "agm-32r9yhgi0l-i2pne9-POST",
+      "name": "studio_restore_backup",
+      "type": "aws_api_gateway_method",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources/i2pne9?region=eu-north-1",
+      "dependencies": [
+        "aws_api_gateway_resource.studio",
+        "aws_api_gateway_resource.studio_id",
+        "aws_api_gateway_resource.studio_restore",
+        "aws_api_gateway_resource.studio_restore_backup",
+        "aws_api_gateway_rest_api.api"
+      ]
+    },
+    {
+      "id": "32r9yhgi0l",
+      "name": "api",
+      "type": "aws_api_gateway_rest_api",
+      "url": "https://eu-north-1.console.aws.amazon.com/apigateway/main/apis/32r9yhgi0l/resources?api=32r9yhgi0l",
+      "dependencies": []
+    },
+    {
+      "id": "Backup",
+      "name": "backup-table",
+      "type": "aws_dynamodb_table",
+      "url": "https://eu-north-1.console.aws.amazon.com/dynamodb/home?region=eu-north-1#tables:selected=Backup;tab=overview",
+      "dependencies": []
+    },
+    {
+      "id": "joke",
+      "name": "joke-table",
+      "type": "aws_dynamodb_table",
+      "url": "https://eu-north-1.console.aws.amazon.com/dynamodb/home?region=eu-north-1#tables:selected=joke;tab=overview",
+      "dependencies": []
+    },
+    {
+      "id": "ResourcePlans",
+      "name": "resources-table",
+      "type": "aws_dynamodb_table",
+      "url": "https://eu-north-1.console.aws.amazon.com/dynamodb/home?region=eu-north-1#tables:selected=ResourcePlans;tab=overview",
+      "dependencies": []
+    },
+    {
+      "id": "restore",
+      "name": "restore-table",
+      "type": "aws_dynamodb_table",
+      "url": "https://eu-north-1.console.aws.amazon.com/dynamodb/home?region=eu-north-1#tables:selected=restore;tab=overview",
+      "dependencies": []
+    },
+    {
+      "id": "Studio",
+      "name": "studio-table",
+      "type": "aws_dynamodb_table",
+      "url": "https://eu-north-1.console.aws.amazon.com/dynamodb/home?region=eu-north-1#tables:selected=Studio;tab=overview",
+      "dependencies": []
+    },
+    {
+      "id": "i-0ec217c1d3100f099",
+      "name": "backupinstance",
+      "type": "aws_instance",
+      "url": "https://eu-north-1.console.aws.amazon.com/ec2/v2/home?region=eu-north-1#InstanceDetails:instanceId=i-0ec217c1d3100f099",
+      "dependencies": [
+        "aws_iam_instance_profile.backupinstance",
+        "data.aws_ami.latest_al"
+      ]
+    },
+    {
+      "id": "dev-BackupCommandInfoFunction",
+      "name": "BackupCommandInfoFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-BackupCommandInfoFunction",
+      "dependencies": [
+        "aws_iam_instance_profile.backupinstance",
+        "aws_instance.backupinstance",
+        "data.aws_ami.latest_al"
+      ]
+    },
+    {
+      "id": "dev-BackupDeleteFunction",
+      "name": "BackupDeleteFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-BackupDeleteFunction",
+      "dependencies": [
+        "aws_sns_topic.BackupEventTopic"
+      ]
+    },
+    {
+      "id": "dev-BackupFunction",
+      "name": "BackupFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-BackupFunction",
+      "dependencies": [
+        "aws_iam_instance_profile.backupinstance",
+        "aws_instance.backupinstance",
+        "aws_ssm_document.backup_command",
+        "data.aws_ami.latest_al"
+      ]
+    },
+    {
+      "id": "dev-BackupGetFunction",
+      "name": "BackupGetFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-BackupGetFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-BackupInitFunction",
+      "name": "BackupInitFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-BackupInitFunction",
+      "dependencies": [
+        "aws_iam_instance_profile.backupinstance",
+        "aws_instance.backupinstance",
+        "aws_lambda_function.BackupCommandInfoFunction",
+        "aws_lambda_function.BackupFunction",
+        "aws_lambda_function.BackupStatusUpdateFunction",
+        "aws_sfn_state_machine.backup_state_machine",
+        "aws_ssm_document.backup_command",
+        "data.aws_ami.latest_al"
+      ]
+    },
+    {
+      "id": "dev-BackupPostFunction",
+      "name": "BackupPostFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-BackupPostFunction",
+      "dependencies": [
+        "aws_sns_topic.BackupEventTopic"
+      ]
+    },
+    {
+      "id": "dev-BackupScheduleCreateFunction",
+      "name": "BackupScheduleCreateFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-BackupScheduleCreateFunction",
+      "dependencies": [
+        "aws_lambda_function.PeriodicBackupFunction",
+        "aws_scheduler_schedule_group.backup",
+        "aws_sns_topic.BackupEventTopic"
+      ]
+    },
+    {
+      "id": "dev-BackupScheduleRemoveFunction",
+      "name": "BackupScheduleRemoveFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-BackupScheduleRemoveFunction",
+      "dependencies": [
+        "aws_lambda_function.PeriodicBackupFunction",
+        "aws_scheduler_schedule_group.backup",
+        "aws_sns_topic.BackupEventTopic"
+      ]
+    },
+    {
+      "id": "dev-BackupStatusUpdateFunction",
+      "name": "BackupStatusUpdateFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-BackupStatusUpdateFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-jokeCertificateFunction",
+      "name": "jokeCertificateFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-jokeCertificateFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-jokeDeleteFunction",
+      "name": "jokeDeleteFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-jokeDeleteFunction",
+      "dependencies": [
+        "aws_sns_topic.jokeEventTopic"
+      ]
+    },
+    {
+      "id": "dev-jokeGetForClientFunction",
+      "name": "jokeGetForClientFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-jokeGetForClientFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-jokeGetFunction",
+      "name": "jokeGetFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-jokeGetFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-jokeGetStatusFunction",
+      "name": "jokeGetStatusFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-jokeGetStatusFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-jokePostPointFunction",
+      "name": "jokePostPointFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-jokePostPointFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-jokePostUnpointFunction",
+      "name": "jokePostUnpointFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-jokePostUnpointFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-jokePostValidateFunction",
+      "name": "jokePostValidateFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-jokePostValidateFunction",
+      "dependencies": [
+        "aws_sns_topic.jokeEventTopic"
+      ]
+    },
+    {
+      "id": "dev-jokePutFunction",
+      "name": "jokePutFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-jokePutFunction",
+      "dependencies": [
+        "aws_sns_topic.jokeEventTopic"
+      ]
+    },
+    {
+      "id": "dev-EventEcsTaskStateChangeFunction",
+      "name": "EventEcsTaskStateChangeFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-EventEcsTaskStateChangeFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-PeriodicBackupFunction",
+      "name": "PeriodicBackupFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-PeriodicBackupFunction",
+      "dependencies": [
+        "aws_sns_topic.BackupEventTopic"
+      ]
+    },
+    {
+      "id": "dev-restoreGetFunction",
+      "name": "restoreGetFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-restoreGetFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-restorePostFunction",
+      "name": "restorePostFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-restorePostFunction",
+      "dependencies": [
+        "aws_sns_topic.BackupEventTopic"
+      ]
+    },
+    {
+      "id": "dev-ServiceActionFunction",
+      "name": "ServiceActionFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-ServiceActionFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-ServiceCreateDatabaseFunction",
+      "name": "ServiceCreateDatabaseFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-ServiceCreateDatabaseFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-ServiceCreateFilesystemFunction",
+      "name": "ServiceCreateFilesystemFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-ServiceCreateFilesystemFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-ServiceCreateInitFunction",
+      "name": "ServiceCreateInitFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-ServiceCreateInitFunction",
+      "dependencies": [
+        "aws_lambda_function.ServiceCreateDatabaseFunction",
+        "aws_lambda_function.ServiceCreateFilesystemFunction",
+        "aws_lambda_function.ServiceCreateLogGroupFunction",
+        "aws_lambda_function.ServiceCreateOriginCertificateFunction",
+        "aws_lambda_function.ServiceCreateRunTaskFunction",
+        "aws_lambda_function.ServiceCreateTaskDefinitionFunct",
+        "aws_sfn_state_machine.create_state_machine",
+        "aws_sns_topic.StudioEventTopic",
+        "data.aws_caller_identity.current"
+      ]
+    },
+    {
+      "id": "dev-ServiceCreateLogGroupFunction",
+      "name": "ServiceCreateLogGroupFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-ServiceCreateLogGroupFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-ServiceCreateOriginCertificateFunction",
+      "name": "ServiceCreateOriginCertificateFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-ServiceCreateOriginCertificateFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-ServiceCreateRunTaskFunction",
+      "name": "ServiceCreateRunTaskFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-ServiceCreateRunTaskFunction",
+      "dependencies": [
+        "aws_sns_topic.StudioEventTopic",
+        "data.aws_caller_identity.current"
+      ]
+    },
+    {
+      "id": "dev-ServiceCreateTaskDefinitionFunct",
+      "name": "ServiceCreateTaskDefinitionFunct",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-ServiceCreateTaskDefinitionFunct",
+      "dependencies": [
+        "data.aws_caller_identity.current"
+      ]
+    },
+    {
+      "id": "dev-sampleDeleteFunction",
+      "name": "StudioDeleteFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-sampleDeleteFunction",
+      "dependencies": [
+        "data.aws_caller_identity.current"
+      ]
+    },
+    {
+      "id": "dev-sampleGetForClient",
+      "name": "StudioGetForClient",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-sampleGetForClient",
+      "dependencies": []
+    },
+    {
+      "id": "dev-sampleGetFunction",
+      "name": "StudioGetFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-sampleGetFunction",
+      "dependencies": []
+    },
+    {
+      "id": "dev-samplePostActionFunction",
+      "name": "StudioPostActionFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-samplePostActionFunction",
+      "dependencies": [
+        "aws_sns_topic.StudioEventTopic"
+      ]
+    },
+    {
+      "id": "dev-samplePostResourcePlan",
+      "name": "StudioPostResourcePlan",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-samplePostResourcePlan",
+      "dependencies": [
+        "aws_sns_topic.StudioEventTopic"
+      ]
+    },
+    {
+      "id": "dev-samplePutFunction",
+      "name": "StudioPutFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-samplePutFunction",
+      "dependencies": [
+        "aws_sns_topic.StudioEventTopic"
+      ]
+    },
+    {
+      "id": "dev-sampleResourcePlanUpdateFunction",
+      "name": "StudioResourcePlanUpdateFunction",
+      "type": "aws_lambda_function",
+      "url": "https://eu-north-1.console.aws.amazon.com/lambda/home?region=eu-north-1#/functions/dev-sampleResourcePlanUpdateFunction",
+      "dependencies": []
+    },
+    {
+      "id": "Z2X8VC9F18RVIG__d3c21946bc376d9eca652f4ef0cba5c9.api.example.net._CNAME",
+      "name": "api",
+      "type": "aws_route53_record",
+      "url": "https://eu-north-1.console.aws.amazon.com/route53/v2/hostedzones#Z2X8VC9F18RVIG/records",
+      "dependencies": [
+        "aws_acm_certificate.api",
+        "data.aws_route53_zone.example"
+      ]
+    },
+    {
+      "id": "Z2X8VC9F18RVIG_api.example.net_A",
+      "name": "studios",
+      "type": "aws_route53_record",
+      "url": "https://eu-north-1.console.aws.amazon.com/route53/v2/hostedzones#Z2X8VC9F18RVIG/records",
+      "dependencies": [
+        "aws_acm_certificate.api",
+        "aws_acm_certificate_validation.api",
+        "aws_api_gateway_joke_name.api",
+        "aws_route53_record.api",
+        "data.aws_route53_zone.example",
+        "time_sleep.wait_15_seconds"
+      ]
+    },
+    {
+      "id": "dev-cloud-backup",
+      "name": "backup",
+      "type": "aws_scheduler_schedule_group",
+      "url": null,
+      "dependencies": []
+    },
+    {
+      "id": "dev-joke-certificate-renew",
+      "name": "certificate",
+      "type": "aws_scheduler_schedule_group",
+      "url": null,
+      "dependencies": []
+    },
+    {
+      "id": "arn:aws:states:eu-north-1:012345678910:stateMachine:dev-backup-statemachine",
+      "name": "backup_state_machine",
+      "type": "aws_sfn_state_machine",
+      "url": "https://eu-north-1.console.aws.amazon.com/states/home?region=eu-north-1#/statemachines/view/arn:aws:states:eu-north-1:012345678910:stateMachine:dev-backup-statemachine",
+      "dependencies": [
+        "aws_iam_instance_profile.backupinstance",
+        "aws_instance.backupinstance",
+        "aws_lambda_function.BackupCommandInfoFunction",
+        "aws_lambda_function.BackupFunction",
+        "aws_lambda_function.BackupStatusUpdateFunction",
+        "aws_ssm_document.backup_command",
+        "data.aws_ami.latest_al"
+      ]
+    },
+    {
+      "id": "arn:aws:states:eu-north-1:012345678910:stateMachine:dev-create-statemachine",
+      "name": "create_state_machine",
+      "type": "aws_sfn_state_machine",
+      "url": "https://eu-north-1.console.aws.amazon.com/states/home?region=eu-north-1#/statemachines/view/arn:aws:states:eu-north-1:012345678910:stateMachine:dev-create-statemachine",
+      "dependencies": [
+        "aws_lambda_function.ServiceCreateDatabaseFunction",
+        "aws_lambda_function.ServiceCreateFilesystemFunction",
+        "aws_lambda_function.ServiceCreateLogGroupFunction",
+        "aws_lambda_function.ServiceCreateOriginCertificateFunction",
+        "aws_lambda_function.ServiceCreateRunTaskFunction",
+        "aws_lambda_function.ServiceCreateTaskDefinitionFunct",
+        "aws_sns_topic.StudioEventTopic",
+        "data.aws_caller_identity.current"
+      ]
+    },
+    {
+      "id": "arn:aws:sns:eu-north-1:012345678910:dev-BackupEventTopic.fifo",
+      "name": "BackupEventTopic",
+      "type": "aws_sns_topic",
+      "url": "https://eu-north-1.console.aws.amazon.com/sns/v3/home?region=eu-north-1#/topic/arn:aws:sns:eu-north-1:012345678910:dev-BackupEventTopic.fifo",
+      "dependencies": []
+    },
+    {
+      "id": "arn:aws:sns:eu-north-1:012345678910:dev-jokeEventTopic.fifo",
+      "name": "jokeEventTopic",
+      "type": "aws_sns_topic",
+      "url": "https://eu-north-1.console.aws.amazon.com/sns/v3/home?region=eu-north-1#/topic/arn:aws:sns:eu-north-1:012345678910:dev-jokeEventTopic.fifo",
+      "dependencies": []
+    },
+    {
+      "id": "arn:aws:sns:eu-north-1:012345678910:dev-sampleEventTopic.fifo",
+      "name": "StudioEventTopic",
+      "type": "aws_sns_topic",
+      "url": "https://eu-north-1.console.aws.amazon.com/sns/v3/home?region=eu-north-1#/topic/arn:aws:sns:eu-north-1:012345678910:dev-sampleEventTopic.fifo",
+      "dependencies": []
+    },
+    {
+      "id": "arn:aws:sns:eu-north-1:012345678910:dev-BackupEventTopic.fifo:e2cd1c6b-dfb7-41e2-b4de-1fe88bb6b684",
+      "name": "BackupQueue",
+      "type": "aws_sns_topic_subscription",
+      "url": null,
+      "dependencies": [
+        "aws_sns_topic.BackupEventTopic",
+        "aws_sqs_queue.BackupQueue"
+      ]
+    },
+    {
+      "id": "arn:aws:sns:eu-north-1:012345678910:dev-jokeEventTopic.fifo:1723132c-d412-4cda-b317-2b6224856f06",
+      "name": "jokeCertificateQueue",
+      "type": "aws_sns_topic_subscription",
+      "url": null,
+      "dependencies": [
+        "aws_sns_topic.jokeEventTopic",
+        "aws_sqs_queue.jokeCertificateQueue"
+      ]
+    },
+    {
+      "id": "arn:aws:sns:eu-north-1:012345678910:dev-sampleEventTopic.fifo:27336bdb-a3b3-4f9b-97ba-ad5b0937face",
+      "name": "StudioActionQueue",
+      "type": "aws_sns_topic_subscription",
+      "url": null,
+      "dependencies": [
+        "aws_sns_topic.StudioEventTopic",
+        "aws_sqs_queue.StudioActionQueue"
+      ]
+    },
+    {
+      "id": "arn:aws:sns:eu-north-1:012345678910:dev-sampleEventTopic.fifo:5f59e5f2-17e5-412f-8453-88f78877be4e",
+      "name": "StudioCreateBackupScheduleQueue",
+      "type": "aws_sns_topic_subscription",
+      "url": null,
+      "dependencies": [
+        "aws_sns_topic.StudioEventTopic",
+        "aws_sqs_queue.StudioCreateBackupScheduleQueue"
+      ]
+    },
+    {
+      "id": "arn:aws:sns:eu-north-1:012345678910:dev-sampleEventTopic.fifo:5521ecb7-eba2-49e8-a953-a0c0333028eb",
+      "name": "StudioCreateQueue",
+      "type": "aws_sns_topic_subscription",
+      "url": null,
+      "dependencies": [
+        "aws_sns_topic.StudioEventTopic",
+        "aws_sqs_queue.StudioCreateQueue"
+      ]
+    },
+    {
+      "id": "arn:aws:sns:eu-north-1:012345678910:dev-sampleEventTopic.fifo:94f0db99-f2ed-4b61-b18c-d279f883d036",
+      "name": "StudioRemoveBackupScheduleQueue",
+      "type": "aws_sns_topic_subscription",
+      "url": null,
+      "dependencies": [
+        "aws_sns_topic.StudioEventTopic",
+        "aws_sqs_queue.StudioRemoveBackupScheduleQueue"
+      ]
+    },
+    {
+      "id": "arn:aws:sns:eu-north-1:012345678910:dev-sampleEventTopic.fifo:55390b90-4c39-4964-bc0f-ef60f86499b0",
+      "name": "StudioUpdateResourcePlanQueue",
+      "type": "aws_sns_topic_subscription",
+      "url": null,
+      "dependencies": [
+        "aws_sns_topic.StudioEventTopic",
+        "aws_sqs_queue.StudioUpdateResourcePlanQueue"
+      ]
+    },
+    {
+      "id": "https://sqs.eu-north-1.amazonaws.com/012345678910/dev-BackupQueue.fifo",
+      "name": "BackupQueue",
+      "type": "aws_sqs_queue",
+      "url": "https://eu-north-1.console.aws.amazon.com/sqs/v2/home?region=eu-north-1#/queues/https%3A%2F%2Fsqs.eu-north-1.amazonaws.com%2F012345678910%2Fdev-BackupQueue.fifo",
+      "dependencies": []
+    },
+    {
+      "id": "https://sqs.eu-north-1.amazonaws.com/012345678910/dev-jokeCertificateQueue.fifo",
+      "name": "jokeCertificateQueue",
+      "type": "aws_sqs_queue",
+      "url": "https://eu-north-1.console.aws.amazon.com/sqs/v2/home?region=eu-north-1#/queues/https%3A%2F%2Fsqs.eu-north-1.amazonaws.com%2F012345678910%2Fdev-jokeCertificateQueue.fifo",
+      "dependencies": []
+    },
+    {
+      "id": "https://sqs.eu-north-1.amazonaws.com/012345678910/dev-sampleActionQueue.fifo",
+      "name": "StudioActionQueue",
+      "type": "aws_sqs_queue",
+      "url": "https://eu-north-1.console.aws.amazon.com/sqs/v2/home?region=eu-north-1#/queues/https%3A%2F%2Fsqs.eu-north-1.amazonaws.com%2F012345678910%2Fdev-sampleActionQueue.fifo",
+      "dependencies": []
+    },
+    {
+      "id": "https://sqs.eu-north-1.amazonaws.com/012345678910/dev-sampleCreateBackupScheduleQueue.fifo",
+      "name": "StudioCreateBackupScheduleQueue",
+      "type": "aws_sqs_queue",
+      "url": "https://eu-north-1.console.aws.amazon.com/sqs/v2/home?region=eu-north-1#/queues/https%3A%2F%2Fsqs.eu-north-1.amazonaws.com%2F012345678910%2Fdev-sampleCreateBackupScheduleQueue.fifo",
+      "dependencies": []
+    },
+    {
+      "id": "https://sqs.eu-north-1.amazonaws.com/012345678910/dev-sampleCreateQueue.fifo",
+      "name": "StudioCreateQueue",
+      "type": "aws_sqs_queue",
+      "url": "https://eu-north-1.console.aws.amazon.com/sqs/v2/home?region=eu-north-1#/queues/https%3A%2F%2Fsqs.eu-north-1.amazonaws.com%2F012345678910%2Fdev-sampleCreateQueue.fifo",
+      "dependencies": []
+    },
+    {
+      "id": "https://sqs.eu-north-1.amazonaws.com/012345678910/dev-sampleRemoveBackupScheduleQueue.fifo",
+      "name": "StudioRemoveBackupScheduleQueue",
+      "type": "aws_sqs_queue",
+      "url": "https://eu-north-1.console.aws.amazon.com/sqs/v2/home?region=eu-north-1#/queues/https%3A%2F%2Fsqs.eu-north-1.amazonaws.com%2F012345678910%2Fdev-sampleRemoveBackupScheduleQueue.fifo",
+      "dependencies": []
+    },
+    {
+      "id": "https://sqs.eu-north-1.amazonaws.com/012345678910/dev-sampleUpdateResourcePlanQueue.fifo",
+      "name": "StudioUpdateResourcePlanQueue",
+      "type": "aws_sqs_queue",
+      "url": "https://eu-north-1.console.aws.amazon.com/sqs/v2/home?region=eu-north-1#/queues/https%3A%2F%2Fsqs.eu-north-1.amazonaws.com%2F012345678910%2Fdev-sampleUpdateResourcePlanQueue.fifo",
+      "dependencies": []
+    },
+    {
+      "id": "dev-ServiceCommandWrapperDocument",
+      "name": "backup_command",
+      "type": "aws_ssm_document",
+      "url": null,
+      "dependencies": []
+    },
+    {
+      "id": "default",
+      "name": "eventbridge",
+      "type": "aws_iam_role",
+      "url": "https://eu-north-1.console.aws.amazon.com/iam/home?region=eu-north-1#/roles/default",
+      "dependencies": [
+        "module.eventbridge.data.aws_iam_policy_document.assume_role"
+      ]
+    },
+    {
+      "id": "arn:aws:globalaccelerator::012345678910:accelerator/27ca67af-89b4-45f1-91f6-0dd0943fc880",
+      "name": "network",
+      "type": "aws_globalaccelerator_accelerator",
+      "url": "https://eu-north-1.console.aws.amazon.com/globalaccelerator/home?region=eu-north-1#AcceleratorDetails:AcceleratorArn=arn:aws:globalaccelerator::012345678910:accelerator/27ca67af-89b4-45f1-91f6-0dd0943fc880",
+      "dependencies": []
+    },
+    {
+      "id": "arn:aws:globalaccelerator::012345678910:accelerator/27ca67af-89b4-45f1-91f6-0dd0943fc880/listener/07540f76/endpoint-group/95bb37a81002",
+      "name": "network",
+      "type": "aws_globalaccelerator_endpoint_group",
+      "url": null,
+      "dependencies": [
+        "aws_globalaccelerator_accelerator.network",
+        "aws_globalaccelerator_listener.network",
+        "aws_lb.webserver_nlb"
+      ]
+    },
+    {
+      "id": "arn:aws:globalaccelerator::012345678910:accelerator/27ca67af-89b4-45f1-91f6-0dd0943fc880/listener/07540f76",
+      "name": "network",
+      "type": "aws_globalaccelerator_listener",
+      "url": null,
+      "dependencies": [
+        "aws_globalaccelerator_accelerator.network"
+      ]
+    },
+    {
+      "id": "arn:aws:elasticloadbalancing:eu-north-1:012345678910:loadbalancer/app/dev-example-ALB/54839976cca23b01",
+      "name": "webserver_alb",
+      "type": "aws_lb",
+      "url": null,
+      "dependencies": []
+    },
+    {
+      "id": "arn:aws:elasticloadbalancing:eu-north-1:012345678910:loadbalancer/net/dev-example-NLB/6585e9084eec0a85",
+      "name": "webserver_nlb",
+      "type": "aws_lb",
+      "url": null,
+      "dependencies": []
+    },
+    {
+      "id": "arn:aws:elasticloadbalancing:eu-north-1:012345678910:listener/app/dev-example-ALB/54839976cca23b01/0db9b9389f3312f4",
+      "name": "alb_http_listener",
+      "type": "aws_lb_listener",
+      "url": null,
+      "dependencies": [
+        "aws_lb.webserver_alb"
+      ]
+    },
+    {
+      "id": "arn:aws:elasticloadbalancing:eu-north-1:012345678910:listener/app/dev-example-ALB/54839976cca23b01/31e5d5a1c0b70130",
+      "name": "alb_https_listener",
+      "type": "aws_lb_listener",
+      "url": null,
+      "dependencies": [
+        "aws_acm_certificate.alb",
+        "aws_acm_certificate_validation.alb",
+        "aws_lb.webserver_alb",
+        "aws_lb_target_group.alb_http_target_group",
+        "aws_route53_record.alb",
+        "data.aws_route53_zone.alb"
+      ]
+    },
+    {
+      "id": "arn:aws:elasticloadbalancing:eu-north-1:012345678910:listener/net/dev-example-NLB/6585e9084eec0a85/a557a2a837b5c302",
+      "name": "http_listener",
+      "type": "aws_lb_listener",
+      "url": null,
+      "dependencies": [
+        "aws_lb.webserver_nlb",
+        "aws_lb_target_group.http_target_group"
+      ]
+    },
+    {
+      "id": "arn:aws:elasticloadbalancing:eu-north-1:012345678910:listener/net/dev-example-NLB/6585e9084eec0a85/3be3f3d98495034e",
+      "name": "https_listener",
+      "type": "aws_lb_listener",
+      "url": null,
+      "dependencies": [
+        "aws_lb.webserver_nlb",
+        "aws_lb_target_group.https_target_group"
+      ]
+    },
+    {
+      "id": "arn:aws:elasticloadbalancing:eu-north-1:012345678910:targetgroup/tf-20240808143552294000000002/ca139cbeb278d92c",
+      "name": "alb_http_target_group",
+      "type": "aws_lb_target_group",
+      "url": "https://eu-north-1.console.aws.amazon.com/ec2/v2/home?region=eu-north-1#LoadBalancers:search=arn:aws:elasticloadbalancing:eu-north-1:012345678910:targetgroup/tf-20240808143552294000000002/ca139cbeb278d92c",
+      "dependencies": []
+    },
+    {
+      "id": "arn:aws:elasticloadbalancing:eu-north-1:012345678910:targetgroup/tf-20240808143552289300000001/32f87a7d6758d5a2",
+      "name": "http_target_group",
+      "type": "aws_lb_target_group",
+      "url": "https://eu-north-1.console.aws.amazon.com/ec2/v2/home?region=eu-north-1#LoadBalancers:search=arn:aws:elasticloadbalancing:eu-north-1:012345678910:targetgroup/tf-20240808143552289300000001/32f87a7d6758d5a2",
+      "dependencies": []
+    },
+    {
+      "id": "arn:aws:elasticloadbalancing:eu-north-1:012345678910:targetgroup/tf-20240808143552301300000003/6ba23700318885e4",
+      "name": "https_target_group",
+      "type": "aws_lb_target_group",
+      "url": "https://eu-north-1.console.aws.amazon.com/ec2/v2/home?region=eu-north-1#LoadBalancers:search=arn:aws:elasticloadbalancing:eu-north-1:012345678910:targetgroup/tf-20240808143552301300000003/6ba23700318885e4",
+      "dependencies": []
+    },
+    {
+      "id": "Z05529412LJ9W25PDCXNB__a7650388e397d2ac11fba6ec6b054947.example.biz._CNAME",
+      "name": "alb",
+      "type": "aws_route53_record",
+      "url": "https://eu-north-1.console.aws.amazon.com/route53/v2/hostedzones#Z05529412LJ9W25PDCXNB/records",
+      "dependencies": [
+        "aws_acm_certificate.alb",
+        "data.aws_route53_zone.alb"
+      ]
+    },
+    {
+      "id": "Z05529412LJ9W25PDCXNB_*.example.biz_A",
+      "name": "studios",
+      "type": "aws_route53_record",
+      "url": "https://eu-north-1.console.aws.amazon.com/route53/v2/hostedzones#Z05529412LJ9W25PDCXNB/records",
+      "dependencies": [
+        "data.aws_route53_zone.joke"
+      ]
+    },
+    {
+      "id": "Z05677573T7SR5HYC1MYG",
+      "name": "private",
+      "type": "aws_route53_zone",
+      "url": "https://eu-north-1.console.aws.amazon.com/route53/home?region=eu-north-1#hosted-zone/id=Z05677573T7SR5HYC1MYG",
+      "dependencies": []
+    },
+    {
+      "id": "rtb-0a7179f30adf8c11c",
+      "name": "default",
+      "type": "aws_default_route_table",
+      "url": null,
+      "dependencies": [
+        "aws_vpc.this"
+      ]
+    },
+    {
+      "id": "rtb-09e3997f5831c2623",
+      "name": "private",
+      "type": "aws_route_table",
+      "url": null,
+      "dependencies": [
+        "aws_vpc.this",
+        "aws_vpc_ipv4_cidr_block_association.this"
+      ]
+    },
+    {
+      "id": "rtb-08fd8729cf8110c42",
+      "name": "public",
+      "type": "aws_route_table",
+      "url": null,
+      "dependencies": [
+        "aws_vpc.this",
+        "aws_vpc_ipv4_cidr_block_association.this"
+      ]
+    }
+  ]
